@@ -1,0 +1,138 @@
+h1 {
+  text-align: center;
+  font-family: gaudd;
+}  
+
+h5 {
+  font-family: gauranga;
+  font-size: xx-small;
+}  
+
+p {
+  font-family:  "Bhaskar";
+  font-size: large;
+  text-align: justify;
+}
+
+body {
+  background-color: #252121;
+  margin: 0;
+}
+
+/* ---------------------------- content ---------------------------- */
+
+.content {
+  padding-top: 30px;
+  margin-top: 0px;
+  margin-left: 14%;
+  margin-right: 40%;
+}
+
+.content-header-background {
+  background: url("images/page-background-top.png") 0 0 no-repeat;
+  background-size: cover;
+  height: 100%;
+  padding-top: 25px;
+
+}
+
+.content-background {
+  background: url("images/page-background.png") 0 0 repeat-y;
+  background-size: contain;
+  padding-left: 15px;
+  padding-right: 75px;
+  padding-top: 15px;
+}
+
+
+.content-footer-background {
+  background: url("images/page-background-bottom.png") 0 0 no-repeat;
+  background-size: contain;
+  padding: inherit;
+  margin-top: -20px;
+  margin-bottom: 30px;
+  height: 41px;
+
+}
+
+/* ---------------------------- Art images ---------------------------- */
+
+.pillar {
+  background: url("images/pillar.png") 0 0 no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 10%;
+  float: left;
+}
+
+.prahlada-transcendental-instructions {
+  background: url("images/pralada-and-students.jpg") 0 0 no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 35%;
+  float: right;
+  position: absolute;
+  margin-left: 65%;
+}
+
+.supreme-personality-of-godhead {
+  background: url("images/supreme-personality-of-godhead.jpg") 0 0 no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 35%;
+  float: right;
+  position: absolute;
+  margin-left: 65%;
+  margin-top: 60%;
+}
+
+.hiranyakasipu-battle-lord-nrisimha-deva {
+  background: url("images/hiranyakasipu-battle-lord-nrisimha-deva.png") 0 0 no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 35%;
+  float: right;
+  position: absolute;
+  margin-left: 65%;
+  margin-top: 125%;
+}
+
+.lord-nrsimhadeva-captured-hiranyakasipu {
+  background: url("images/lord-nrsimhadeva-captured-hiranyakasipu.jpg") 0 0 no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 35%;
+  float: right;
+  position: absolute;
+  margin-left: 65%;
+  margin-top: 190%;
+}
+
+.brahma-siva-indra-offered-obeisances-prayers {
+  background: url("images/brahma-siva-indra-prayed.jpg") 0 0 no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 35%;
+  float: right;
+  position: absolute;
+  margin-left: 65%;
+  margin-top: 260%;
+}
+
+/* ---------------------------- fonts ---------------------------- */
+
+@font-face {
+  font-family: "bhagavat-gita";
+  #font-style: normal;
+  #font-weight: 100;
+  src: url("fonts/bhagavat-gita.ttf"); 
+}
+
+
+@font-face {
+  font-family: "gauranga";
+  #font-style: normal;
+  #font-weight: 100;
+  src: url("fonts/gauranga.ttf");
+}
+
