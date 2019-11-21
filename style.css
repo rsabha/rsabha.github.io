@@ -67,7 +67,7 @@ body {
 
 .prahlada-transcendental-instructions {
   background: url("images/pralada-and-students.jpg") 0 0 no-repeat;
-  background-size: cover;
+  background-size: contain;
   height: 100%;
   width: 35%;
   float: right;
@@ -77,18 +77,17 @@ body {
 
 .supreme-personality-of-godhead {
   background: url("images/supreme-personality-of-godhead.jpg") 0 0 no-repeat;
-  background-size: cover;
+  background-size: contain;
   height: 100%;
-  width: 35%;
+  width: 40%;
   float: right;
   position: absolute;
-  margin-left: 65%;
-  margin-top: 60%;
+  margin-left: 55%;
 }
 
 .hiranyakasipu-battle-lord-nrisimha-deva {
   background: url("images/hiranyakasipu-battle-lord-nrisimha-deva.png") 0 0 no-repeat;
-  background-size: cover;
+  background-size: contain;
   height: 100%;
   width: 35%;
   float: right;
@@ -111,7 +110,7 @@ body {
 .brahma-siva-indra-offered-obeisances-prayers {
   background: url("images/brahma-siva-indra-prayed.jpg") 0 0 no-repeat;
   background-size: cover;
-  height: 100%;
+  height: 90%;
   width: 35%;
   float: right;
   position: absolute;
