@@ -31,8 +31,7 @@ body {
 .content-header-background {
   background: url("images/page-background-top.png") 0 0 no-repeat;
   background-size: cover;
-  height: 100%;
-  padding-top: 25px;
+  padding-top: 3%;
 
 }
 
@@ -67,12 +66,12 @@ body {
 
 .prahlada-transcendental-instructions {
   background: url("images/pralada-and-students.jpg") 0 0 no-repeat;
-  background-size: contain;
+  background-size: cover;
   height: 100%;
-  width: 36%;
+  width: 35%;
   float: right;
   position: absolute;
-  margin-left: 50%;
+  margin-left: 65%;
 }
 
 .supreme-personality-of-godhead {
