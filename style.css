@@ -69,20 +69,20 @@ body {
   background: url("images/pralada-and-students.jpg") 0 0 no-repeat;
   background-size: contain;
   height: 100%;
-  width: 35%;
+  width: 36%;
   float: right;
   position: absolute;
-  margin-left: 65%;
+  margin-left: 50%;
 }
 
 .supreme-personality-of-godhead {
   background: url("images/supreme-personality-of-godhead.jpg") 0 0 no-repeat;
   background-size: contain;
   height: 100%;
-  width: 40%;
+  width: 35%;
   float: right;
   position: absolute;
-  margin-left: 55%;
+  margin-left: 50%;
 }
 
 .hiranyakasipu-battle-lord-nrisimha-deva {
@@ -92,30 +92,27 @@ body {
   width: 35%;
   float: right;
   position: absolute;
-  margin-left: 65%;
-  margin-top: 125%;
+  margin-left: 50%;
 }
 
 .lord-nrsimhadeva-captured-hiranyakasipu {
   background: url("images/lord-nrsimhadeva-captured-hiranyakasipu.jpg") 0 0 no-repeat;
-  background-size: cover;
+  background-size: contain;
   height: 100%;
   width: 35%;
   float: right;
   position: absolute;
-  margin-left: 65%;
-  margin-top: 190%;
+  margin-left: 50%;
 }
 
 .brahma-siva-indra-offered-obeisances-prayers {
   background: url("images/brahma-siva-indra-prayed.jpg") 0 0 no-repeat;
-  background-size: cover;
+  background-size: contain;
   height: 90%;
   width: 35%;
   float: right;
   position: absolute;
-  margin-left: 65%;
-  margin-top: 260%;
+  margin-left: 50%;
 }
 
 /* ---------------------------- fonts ---------------------------- */
