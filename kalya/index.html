@@ -1,0 +1,99 @@
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>Kalya // devops</title>
+</head>
+
+<body>
+  <div class="logo"></div>
+  <div class="content">
+    <a href="#automated-deployment-system"><h1 id="automated-deployment-system">#automated deployment system</h1></a>
+    <img src="deployment.png">
+    <h3>docker hub</h3>
+    <p>Docker Hub will authorize with your Github account and monitor any
+       repositories and branches you prefer. On a github push event Docker Hub 
+       will pull the code and start an image build.
+    </p>
+    <p>You can use Docker Hub to store any build enviroment variables if you 
+      prefer.</p>
+
+    <details>
+      <summary>Build commands can also be modified by creating a <b>hooks</b> directory in 
+      your code repo. You can also execute shell code before or after the 
+      docker build command.
+      </summary>
+      <div class="codes">
+    <p>$ cat hooks/build</p>
+    <p>#!/bin/bash</p>
+  <p></p>
+      <p>docker build -f $DOCKERFILE_PATH -t $IMAGE_NAME --secret id=rails,src=config/master.key .
+      <p>--</p>
+    <p>$ cat hooks/pre_build</p>
+  <p></p>
+      <p>#!/bin/bash</p>
+      <p>echo "${RAILS_MASTER_KEY}" > config/master.key</p>
+
+    </div>
+    </details>
+    <p>Docker Hub can call your webhook to notify that an image has been build.
+        And then that can trigger your deployment service. 
+    </p>
+  
+    <details>
+      <summary>Verifying that a request came from Docker Hub is an issue currently. 
+        Their feature is either failing or im not implemeneting it correctly.
+        There must be something I'm missing! incoming page on webhooks.
+      </summary>
+      <div class="texts">
+      <p>Docker Hub has a <i>Validate Webhook Callback</i> fuction, its a callback URL 
+        included in the JSON, coming from the webhook. That callback URL accepts a POST
+        request with a JSON body.
+      </p>
+      <p>I'm asuming that fuction is to verify the payload came from Docker Hub?</p>
+      <p>exmaple callback URL:
+        https://registry.hub.docker.com/u/svendowideit/testhook/hook/2141b5bi5i5b02bec211i4eeih0242eg11000a/
+      </p>
+      <p>Sending a POST request to that callback URL does not return any, and if
+        you modified that URL with bogus, it also does not return anything.
+      </p>
+      <p>Im not sure what they are trying to do here. Normally a webhook is verified with a SHA1 hash included in the header. Hashing the payload + shared secret.</p>
+      <p>Similar issues:</p>
+      <li>https://github.com/docker/hub-feedback/issues/943</li>
+      <li>https://github.com/docker/hub-feedback/issues/41#issuecomment-294326109</li>
+      
+      <p>Work around - Doing my own verification:</p>
+
+      <p>1. IP: (im sure IPs will not be static)</p>
+
+      <li>The webhook request is either coming from ec2 or lambda in AWS. 
+        us-east-1</li>
+      <li>can see 3 different IPs from one days of testing.</li>
+
+      <p>2. Trigger webhook from GitHub on push event, to deployment service.
+        Notify that a build is about to start. (Not ideal - lots polling needed)
+      </p>
+      <p>3. Everytime I get a callback, try pull the new image, if no new image exists then abort the deployment process.</p>
+    </div>
+  </details>
+    <h3>deploy system</h3>
+
+    <p>This manages & automates your infrastucture stack. HAproxy exposes a
+      socket that allows this service to control the load balancer. For a new
+      rolling deployment the service will:
+    </p>
+    
+    <li>Pull the newly build image.</li>
+    <li>Disable new connections to the first container via ha-proxy.</li>
+    <li>Wait for the esablished connections to end on that container.</li>
+    <li>Deploy the new image to the container and wait for app to boot.</li>
+    <li>Enable traffic to the container again.</li>
+    <li>Proceed to next container.</li>
+    <hr>
+    <a href="#webhooks"><h1 id="webhooks">Webhooks!</h1></a>
+    
+    <p>Webhooks allows you to integrate with 3rd party apps. You subscribe to an event that happens on there app, if the event is executed, they will notify your callback URL by sending a POST request to it. Now you do not have to constantly poll/call the 3rd party app to check for changes. Win-win</p>
+    
+    <p>I'm not sure why they call it a webhook. Can not think of any hook anology that makes sense :Q?
+    I know hooks are a common thing in software. I've used it in plugins to run some code when a event happens on the main app.</p>
+
+  </div>
+</body>

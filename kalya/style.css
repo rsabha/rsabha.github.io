@@ -1,0 +1,109 @@
+
+body {
+  background-color: darkkhaki;
+}
+
+.content {
+    margin: auto;
+    width: 65%;
+    border: 1px goldenrod;
+    border-style: dotted;
+    margin-bottom: 150px;
+    background-color: beige;
+    padding-bottom: 100px;
+}
+
+h1 {
+    text-align: center;
+    font-weight: inherit;
+    color: #646464;
+    font-family: Impact, Charcoal, sans-serif;
+    text-decoration: underline;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+a {text-decoration: none;}
+
+p, li, details { 
+  padding-left: 100px; 
+  padding-right: 100px;
+  font-family: Impact, Charcoal, sans-serif;
+
+}
+
+b{
+  color: #646464;
+  font-family: Impact, Charcoal, sans-serif;
+  #background-color: white;
+  #font-size: small;
+  #border: 2px solid whitesmoke;
+  #padding: 5px;
+ }
+
+ .codes{
+  color: rgb(29, 172, 41);
+  font-family: Impact, Charcoal, sans-serif;
+  background-color: rgb(53, 53, 53);
+  font-size: small;
+  border: 1px solid whitesmoke;
+  padding: 5px;
+  margin: 20 100 20 100;
+ }
+
+ .texts{
+  #color: rgb(219, 177, 99);
+  font-family: Impact, Charcoal, sans-serif;
+  background-color: rgb(219, 177, 99);
+  font-size: small;
+  border: 1px solid whitesmoke;
+  padding: 5px;
+  margin: 20 100 20 100;
+ }
+
+h3 {
+    #text-align: center;
+    font-weight: inherit;
+    color: #646464;
+    font-family: Impact, Charcoal, sans-serif;
+    padding-top: 50px;
+    padding-left: 100px;
+}
+
+.content img {
+    display: flex;
+    margin: auto;
+    padding-top: 100px;
+    
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    #margin-bottom: 50px;
+    width: 100%;
+    background-position: center; 
+    height: 300px;
+    background-image: url(kalya.png);
+    background-repeat: no-repeat;
+}
+
+hr {
+  margin-top: 100px;
+  color: azure;
+}
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
